@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Usuario</title>
+
+<style>
+
+body{
+font-family: Arial;
+background:#f2f2f2;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+margin:0;
+}
+
+.contenedor{
+background:white;
+padding:30px;
+border-radius:10px;
+text-align:center;
+width:350px;
+box-shadow:0px 0px 10px rgba(0,0,0,0.2);
+}
+
+h1{
+color:#333;
+}
+
+p{
+color:#555;
+}
+
+button{
+background:#007BFF;
+color:white;
+border:none;
+padding:10px 20px;
+border-radius:5px;
+cursor:pointer;
+}
+
+button:hover{
+background:#0056b3;
+}
+
+.progreso{
+width:100%;
+background:#ddd;
+border-radius:5px;
+margin-top:20px;
+}
+
+.barra{
+height:20px;
+width:40%;
+background:#28a745;
+border-radius:5px;
+}
+
+.mensaje{
+margin-top:15px;
+font-weight:bold;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="contenedor">
+
+<h1>Usuario</h1>
+
+<p>¿Quieres saber qué nivel musical tienes?</p>
+
+<a href="2.TipodeNivel.html">
+<button>Ver mi nivel musical</button>
+</a>
+
+<div class="progreso">
+<div class="barra"></div>
+</div>
+
+<p class="mensaje" id="mensaje"></p>
+
+</div>
+
+<script>
+
+let mensajes = [
+"🎵 La música es el lenguaje del alma",
+"🎧 Practicar todos los días mejora tu nivel",
+"🎹 Sigue aprendiendo música",
+"🥁 Cada práctica cuenta"
+];
+
+let numero = Math.floor(Math.random() * mensajes.length);
+
+document.getElementById("mensaje").textContent = mensajes[numero];
+
+</script>
+
+</body>
+</html>
